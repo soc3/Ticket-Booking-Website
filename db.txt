@@ -1,0 +1,108 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.6
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Dec 16, 2016 at 05:45 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `webproject`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pnr`
+--
+
+CREATE TABLE `pnr` (
+  `name` varchar(100) NOT NULL,
+  `tickets` varchar(100) NOT NULL,
+  `p1` varchar(100) NOT NULL,
+  `p2` varchar(100) NOT NULL,
+  `p3` varchar(100) NOT NULL,
+  `p4` varchar(100) NOT NULL,
+  `trainname` varchar(100) NOT NULL,
+  `from2` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pnr`
+--
+
+INSERT INTO `pnr` (`name`, `tickets`, `p1`, `p2`, `p3`, `p4`, `trainname`, `from2`) VALUES
+('abc', '3', '1234', '5678', '9891', '', 'Kota Exp', 'Kanpur'),
+('abc', '3', '1234', '5678', '9891', '', 'Kota Exp', 'Kanpur'),
+('def', '3', '1234', '5678', '9891', '', 'Kota Exp', 'Kanpur'),
+('mohit', '0', ' ', ' ', '9891', '', 'Kota Exp', 'Kanpur'),
+('prasoon', '2', ' ', '5678', '9891', '4523', 'Kota Exp', 'Kanpur'),
+('abcd', '2', ' ', ' ', '9891', '4523', 'Kota Exp', 'Kanpur'),
+('mohit', '0', ' ', '5678', '', '', 'Kota Exp', 'Kanpur'),
+('sushant', '2', ' ', ' ', '9891', '4523', 'Sangam Exp', 'Kanpur'),
+('sushant', '4', '1234', '5678', '9891', '4523', 'Sangam Exp', 'Kanpur'),
+('sushant', '4', '1234', '5678', '9891', '4523', 'Sangam Exp', 'Kanpur');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trains`
+--
+
+CREATE TABLE `trains` (
+  `trainnum` varchar(100) NOT NULL,
+  `trainname` varchar(100) NOT NULL,
+  `from2` varchar(100) NOT NULL,
+  `to2` varchar(100) NOT NULL,
+  `departure` varchar(100) NOT NULL,
+  `arrival` varchar(100) NOT NULL,
+  `distance` varchar(100) NOT NULL,
+  `traveltime` varchar(100) NOT NULL,
+  `available` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trains`
+--
+
+INSERT INTO `trains` (`trainnum`, `trainname`, `from2`, `to2`, `departure`, `arrival`, `distance`, `traveltime`, `available`) VALUES
+('13007', 'Abhatoofan exp', 'Allahabad', 'Agra', '5:15', '15:29', '454 Km', '10:14', 'yes'),
+('12403', 'Ald Jaipur Exp', 'Allahabad', 'Agra', '23:30', '6:38', '449 Km', '7:08', 'yes'),
+('13008', 'Abhatoofan exp', 'Agra', 'Allahabad', '11:28', '22:10', '454 Km', '10:42', 'no'),
+('12404', 'Jaipur Ald Exp', 'Agra', 'Allahabad', '21:42', '4:55', '449 Km', '7:13', 'no'),
+('14163', 'Sangam Exp', 'Allahabad', 'Kanpur', '17:45', '21:20', '195 Km', '3:35', 'yes'),
+('12487', 'Seemanchal Exp', 'Allahabad', 'Kanpur', '11:55', '14:15', '195 Km', '2:20', 'yes'),
+('14164', 'Sangam Exp', 'Kanpur', 'Allahabad', '4:20', '8:15', '195 Km', '3:55', 'yes'),
+('12312', 'Kalka Mail', 'Kanpur', 'Allahabad', '14:30', '17:10', '195 Km', '2:40', 'yes'),
+('13239', 'Kota Exp', 'Kanpur', 'Agra', '1:30', '5:13', '255 Km', '3:43', 'yes'),
+('12179', 'LJN AGC Intercity ', 'Kanpur', 'Agra', '17:30', '21:34', '255 Km', '4:04', 'yes'),
+('13008', 'Abhatoofan exp', 'Agra', 'Kanpur', '11:28', '18:45', '260 Km', '7:17', 'no'),
+('12404', 'Jaipur Ald Exp', 'Agra', 'Kanpur', '21:42', '02:00', '255 Km', '4:18', 'no');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `cpassword` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `dob` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `pincode` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `password`, `cpassword`, `email`, `dob`, `address`, `pincode`, `phone`) VALUES
+('mohit', '1', '1', '1', '1', '1', '1', '1'),
+('sush', '1', '1', 'sddf', '25/06/1996', '1', '208017', '9839661339');
