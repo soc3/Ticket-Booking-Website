@@ -4,6 +4,7 @@ With a Login and Signup page.
 if you want to login without signing up 
 use: username : manan
 password : 1
+
 -----------------------------------------------------------
 
 Website displays trains between different stations on different dates and you can book ticket for one or more
@@ -18,6 +19,7 @@ Database is been maintained for :
 3) trains
 
 home page : home.php (to start)
+
 --------------------------------------------------------
 
 
